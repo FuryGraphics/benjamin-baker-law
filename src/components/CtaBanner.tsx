@@ -18,7 +18,7 @@ export default function CtaBanner({ setRoute }: CtaBannerProps) {
 
   return (
     <section 
-      className="relative bg-[#0C0C0C] py-24 px-5 sm:px-6 lg:px-8 border-b border-[rgba(201,168,76,0.18)] text-center overflow-hidden" 
+      className="relative bg-[#FAF8F3] py-24 px-5 sm:px-6 lg:px-8 border-b border-[rgba(201,168,76,0.18)] text-center overflow-hidden" 
       aria-labelledby="cta-banner-title"
       id="cta-banner-section"
     >
@@ -32,12 +32,12 @@ export default function CtaBanner({ setRoute }: CtaBannerProps) {
 
       <div className="max-w-4xl mx-auto relative z-10 space-y-8">
         {/* Main Title heading (Cormorant Serif Italic) */}
-        <h2 id="cta-banner-title" className="font-serif italic text-4xl sm:text-5xl lg:text-6xl text-[#E8D08A] font-light leading-snug">
+        <h2 id="cta-banner-title" className="font-serif italic text-4xl sm:text-5xl lg:text-6xl text-[#9A7A28] font-light leading-snug">
           Ready to Protect What Matters?
         </h2>
 
         {/* Muted description text */}
-        <p className="font-sans text-xs sm:text-sm md:text-base text-[#888880] tracking-wider max-w-xl mx-auto leading-relaxed">
+        <p className="font-sans text-xs sm:text-sm md:text-base text-[#5F5B53] tracking-wider max-w-xl mx-auto leading-relaxed">
           Contact Benjamin A. Baker today for a free consultation. We serve clients throughout Grayson County and North Texas. Let’s evaluate your situation.
         </p>
 
@@ -45,7 +45,7 @@ export default function CtaBanner({ setRoute }: CtaBannerProps) {
         <div className="flex flex-col items-center justify-center space-y-4 pt-4">
           <a
             href="tel:9032717824"
-            className="group inline-flex items-center justify-center space-x-3 bg-[#C9A84C] text-[#0C0C0C] font-sans text-xs sm:text-sm font-bold tracking-[4px] uppercase py-5 px-10 hover:bg-[#E8D08A] active:bg-[#C9A84C] transition-all duration-300 shadow-xl shadow-black/80"
+            className="group inline-flex items-center justify-center space-x-3 bg-[#C9A84C] text-[#0C0C0C] font-sans text-xs sm:text-sm font-bold tracking-[4px] uppercase py-5 px-10 hover:bg-[#9A7A28] active:bg-[#C9A84C] transition-all duration-300 shadow-xl shadow-black/[0.10]"
             id="cta-banner-call-btn"
           >
             <Phone className="w-5 h-5 text-[#0C0C0C] fill-current" />
@@ -54,7 +54,7 @@ export default function CtaBanner({ setRoute }: CtaBannerProps) {
 
           <button
             onClick={handleMessageClick}
-            className="group flex items-center space-x-2 text-[#C9A84C] hover:text-[#E8D08A] text-xs font-semibold uppercase tracking-widest transition-colors py-2 cursor-pointer focus:outline-none"
+            className="group flex items-center space-x-2 text-[#C9A84C] hover:text-[#9A7A28] text-xs font-semibold uppercase tracking-widest transition-colors py-2 cursor-pointer focus:outline-none"
             id="cta-banner-message-link"
           >
             <span>Or send a confidential message</span>

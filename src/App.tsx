@@ -74,7 +74,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col justify-between bg-[#0C0C0C] text-[#F2EDE4] selection:bg-[#C9A84C]/30 selection:text-[#E8D08A] overflow-x-hidden font-sans" id="law-firm-root">
+    <div className="min-h-screen flex flex-col justify-between bg-[#FAF8F3] text-[#1F1D1A] selection:bg-[#C9A84C]/30 selection:text-[#9A7A28] overflow-x-hidden font-sans" id="law-firm-root">
       {/* Premium Header/Navigation Bar */}
       <Navbar currentRoute={route} setRoute={handleSetRoute} />
 

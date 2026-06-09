@@ -248,32 +248,32 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
   ];
 
   return (
-    <main className="bg-[#0C0C0C] min-h-screen text-[#F2EDE4] relative pt-32 pb-24 px-5 sm:px-6 lg:px-8 overflow-x-hidden" id="city-details-wrapper">
+    <main className="bg-[#FAF8F3] min-h-screen text-[#1F1D1A] relative pt-32 pb-24 px-5 sm:px-6 lg:px-8 overflow-x-hidden" id="city-details-wrapper">
       <div className="absolute inset-0 grain-overlay pointer-events-none opacity-[0.03]" />
       <div className="absolute top-[10%] left-[10%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.03)_0%,rgba(0,0,0,0)_75%)] pointer-events-none filter blur-2xl" />
 
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
         {/* Dynamic Breadcrumb Bar */}
-        <nav className="flex items-center space-x-2 text-xs text-[#888880] tracking-widest uppercase font-mono py-2.5 border-b border-white/[0.04]">
+        <nav className="flex items-center space-x-2 text-xs text-[#5F5B53] tracking-widest uppercase font-mono py-2.5 border-b border-black/[0.08]">
           <button onClick={() => navigateToRoute('home')} className="hover:text-[#C9A84C] flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             <span>HOME</span>
           </button>
           <span>/</span>
-          <span className="text-[#E8D08A]">{content.cityName.toUpperCase()}</span>
+          <span className="text-[#9A7A28]">{content.cityName.toUpperCase()}</span>
         </nav>
 
         {/* 1. Full-Width Hero layout banner */}
         <div className="space-y-6 max-w-4xl" id="seo-city-hero">
-          <div className="inline-flex items-center space-x-2 border border-[#C9A84C]/25 bg-black/40 py-1.5 px-4 rounded-full text-[10px] font-sans tracking-[4px] uppercase text-[#E8D08A]">
+          <div className="inline-flex items-center space-x-2 border border-[#C9A84C]/25 bg-black/[0.03] py-1.5 px-4 rounded-full text-[10px] font-sans tracking-[4px] uppercase text-[#9A7A28]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
             <span>LOCAL GRAYSON COUNTY COUNSEL</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#E8D08A] font-medium leading-[1.1] tracking-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#9A7A28] font-medium leading-[1.1] tracking-tight">
             {content.h1}
           </h1>
-          <p className="font-sans text-xs sm:text-sm text-[#888880] tracking-widest uppercase border-l-2 border-[#C9A84C] pl-4">
+          <p className="font-sans text-xs sm:text-sm text-[#5F5B53] tracking-widest uppercase border-l-2 border-[#C9A84C] pl-4">
             Advocating for the community of {content.cityName} · Law Offices in nearby Sherman, Texas
           </p>
         </div>
@@ -285,44 +285,44 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
           <div className="lg:col-span-8 space-y-12">
             
             {/* Intro Copy (minimum 200 words) */}
-            <section className="space-y-6 border-b border-white/[0.04] pb-10">
-              <h2 className="font-serif text-2xl text-[#F2EDE4] font-semibold tracking-wide">
+            <section className="space-y-6 border-b border-black/[0.08] pb-10">
+              <h2 className="font-serif text-2xl text-[#1F1D1A] font-semibold tracking-wide">
                 Dedicated Legal Advocacy in {content.cityName}
               </h2>
-              <p className="font-sans text-xs sm:text-sm md:text-base text-[#888880]/90 leading-relaxed font-normal whitespace-pre-line">
+              <p className="font-sans text-xs sm:text-sm md:text-base text-[#5F5B53]/90 leading-relaxed font-normal whitespace-pre-line">
                 {content.intro}
               </p>
             </section>
 
             {/* List of Practice Areas Served */}
             <section className="space-y-6" id="services-covered-list">
-              <h2 className="font-serif text-2xl text-[#E8D08A] font-semibold tracking-wide">
+              <h2 className="font-serif text-2xl text-[#9A7A28] font-semibold tracking-wide">
                 Specialized Practice Areas We Represent
               </h2>
-              <p className="font-sans text-xs text-[#888880] leading-relaxed">
+              <p className="font-sans text-xs text-[#5F5B53] leading-relaxed">
                 Our law offices represent individuals, professionals, and small business networks in {content.cityName} through four major areas of Texas laws:
               </p>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {servicesList.map((service, idx) => (
-                  <div key={idx} className="bg-[#141414] border border-white/[0.03] hover:border-[#C9A84C]/25 p-5 rounded-sm transition-all group">
+                  <div key={idx} className="bg-[#FFFFFF] border border-black/[0.07] hover:border-[#C9A84C]/25 p-5 rounded-sm transition-all group">
                     <div className="flex items-center space-x-3 mb-3">
-                      <div className="p-2 border border-[#C9A84C]/20 bg-black/40 rounded-sm">
+                      <div className="p-2 border border-[#C9A84C]/20 bg-black/[0.03] rounded-sm">
                         {service.route.includes('family') && <Users className="w-5 h-5 text-[#C9A84C]" />}
                         {service.route.includes('injury') && <Scale className="w-5 h-5 text-[#C9A84C]" />}
                         {service.route.includes('civil') && <Briefcase className="w-5 h-5 text-[#C9A84C]" />}
                         {service.route.includes('employ') && <ShieldAlert className="w-5 h-5 text-[#C9A84C]" />}
                       </div>
-                      <h3 className="font-serif text-base text-[#F2EDE4] group-hover:text-[#E8D08A] font-semibold transition-colors">
+                      <h3 className="font-serif text-base text-[#1F1D1A] group-hover:text-[#9A7A28] font-semibold transition-colors">
                         {service.title}
                       </h3>
                     </div>
-                    <p className="font-sans text-xs text-[#888880] leading-relaxed mb-4">
+                    <p className="font-sans text-xs text-[#5F5B53] leading-relaxed mb-4">
                       {service.desc}
                     </p>
                     <button 
                       onClick={() => navigateToRoute(service.route)}
-                      className="inline-flex items-center space-x-1.5 text-xs text-[#C9A84C] hover:text-[#E8D08A] font-sans font-semibold tracking-wider uppercase focus:outline-none"
+                      className="inline-flex items-center space-x-1.5 text-xs text-[#C9A84C] hover:text-[#9A7A28] font-sans font-semibold tracking-wider uppercase focus:outline-none"
                     >
                       <span>Explore Area</span>
                       <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
@@ -333,17 +333,17 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
             </section>
 
             {/* Local Courthouse Info Section */}
-            <section className="bg-[#141414]/90 border border-[#C9A84C]/15 p-6 sm:p-8 rounded-sm space-y-4" id="court-seo-reference">
+            <section className="bg-[#FFFFFF]/90 border border-[#C9A84C]/15 p-6 sm:p-8 rounded-sm space-y-4" id="court-seo-reference">
               <div className="flex items-start space-x-3.5">
                 <Landmark className="w-6 h-6 text-[#C9A84C] shrink-0 mt-1" />
                 <div className="space-y-2">
-                  <h3 className="font-serif text-lg text-[#E8D08A] font-semibold tracking-wide">
+                  <h3 className="font-serif text-lg text-[#9A7A28] font-semibold tracking-wide">
                     {content.courthouseTitle}
                   </h3>
-                  <p className="font-sans text-xs text-[#888880] leading-relaxed">
+                  <p className="font-sans text-xs text-[#5F5B53] leading-relaxed">
                     {content.courthouseDetails}
                   </p>
-                  <div className="flex items-center space-x-2 text-[11px] text-[#F2EDE4]/80 font-mono">
+                  <div className="flex items-center space-x-2 text-[11px] text-[#1F1D1A]/80 font-mono">
                     <MapPin className="w-3.5 h-3.5 text-[#C9A84C]" />
                     <span>Court Location: {content.courtAddress}</span>
                   </div>
@@ -353,13 +353,13 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
 
             {/* Google Maps Embed focused on 416 S Crockett St, Sherman TX */}
             <section className="space-y-4" id="office-map-embed">
-              <h3 className="font-serif text-xl text-[#F2EDE4] font-semibold">
+              <h3 className="font-serif text-xl text-[#1F1D1A] font-semibold">
                 Our Physical Offices Headquarters
               </h3>
-              <p className="font-sans text-xs text-[#888880]">
+              <p className="font-sans text-xs text-[#5F5B53]">
                 If you are driving from {content.cityName}, our central Sherman office is easily located steps away from the Grayson County Courthouse. See interactive map directions below:
               </p>
-              <div className="aspect-[16/9] w-full border border-white/[0.04] bg-[#141414] overflow-hidden rounded-sm relative">
+              <div className="aspect-[16/9] w-full border border-black/[0.08] bg-[#FFFFFF] overflow-hidden rounded-sm relative">
                 <iframe 
                   title="Benjamin A. Baker P.C. Sherman Offices Map Directions"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.9654152865955!2d-96.6115933!3d33.63855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864ca06dd65b7cb3%3A0xe54b9d07ec6561cf!2s416%20S%20Crockett%20St%2C%20Sherman%2C%20TX%2075090!5e0!3m2!1sen!2sus!4v1716490325810!5m2!1sen!2sus"
@@ -378,20 +378,20 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
           <div className="lg:col-span-4 space-y-8" id="city-sidebar">
             
             {/* Sherman Office Details Card */}
-            <div className="bg-[#141414] border border-[rgba(201,168,76,0.18)] p-6 space-y-5 shadow-xl">
+            <div className="bg-[#FFFFFF] border border-[rgba(201,168,76,0.18)] p-6 space-y-5 shadow-xl">
               <span className="font-sans text-xs tracking-[4px] text-[#C9A84C] uppercase block font-semibold">
                 HEADQUARTERS
               </span>
-              <h3 className="font-serif text-xl text-[#E8D08A] font-semibold">
+              <h3 className="font-serif text-xl text-[#9A7A28] font-semibold">
                 Sherman Offices
               </h3>
 
-              <div className="space-y-4 text-xs font-sans text-[#888880]">
+              <div className="space-y-4 text-xs font-sans text-[#5F5B53]">
                 {/* Physical Location */}
                 <div className="flex items-start space-x-2.5">
                   <MapPin className="w-4.5 h-4.5 text-[#C9A84C] shrink-0 mt-0.5" />
                   <div>
-                    <strong className="block text-[#F2EDE4] font-medium font-serif">Benjamin A. Baker P.C.</strong>
+                    <strong className="block text-[#1F1D1A] font-medium font-serif">Benjamin A. Baker P.C.</strong>
                     <span className="block mt-1">416 S Crockett St</span>
                     <span className="block">Sherman, TX 75090</span>
                     <span className="text-[10px] italic block mt-1">Steps away from District Courthouses.</span>
@@ -403,7 +403,7 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
                   <Phone className="w-4.5 h-4.5 text-[#C9A84C] shrink-0" />
                   <div>
                     <span>Direct:</span>{' '}
-                    <a href="tel:9032717824" className="text-[#E8D08A] hover:text-[#C9A84C] hover:underline font-semibold font-mono">
+                    <a href="tel:9032717824" className="text-[#9A7A28] hover:text-[#C9A84C] hover:underline font-semibold font-mono">
                       (903) 271-7824
                     </a>
                   </div>
@@ -414,7 +414,7 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
                   <Mail className="w-4.5 h-4.5 text-[#C9A84C] shrink-0" />
                   <div>
                     <span>Confidential Inbox:</span>{' '}
-                    <a href="mailto:BenjaminABaker62@gmail.com" className="text-[#E8D08A] hover:text-[#C9A84C] hover:underline block truncate">
+                    <a href="mailto:BenjaminABaker62@gmail.com" className="text-[#9A7A28] hover:text-[#C9A84C] hover:underline block truncate">
                       BenjaminABaker62@gmail.com
                     </a>
                   </div>
@@ -425,28 +425,28 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
                   <Clock className="w-4.5 h-4.5 text-[#C9A84C] shrink-0 mt-0.5" />
                   <div>
                     <span>Office Hours:</span>
-                    <span className="text-[#F2EDE4] block mt-1">Monday – Friday</span>
+                    <span className="text-[#1F1D1A] block mt-1">Monday – Friday</span>
                     <span className="block text-[10px]">8:30 AM – 5:30 PM (Sat/Sun Appt Only)</span>
                   </div>
                 </div>
               </div>
 
-              <div className="w-full h-px bg-white/[0.04] pt-2" />
+              <div className="w-full h-px bg-black/[0.08] pt-2" />
               
               <button 
                 onClick={() => navigateToRoute('contact')}
-                className="w-full bg-[#C9A84C] hover:bg-[#E8D08A] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3 transition-colors cursor-pointer"
+                className="w-full bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3 transition-colors cursor-pointer"
               >
                 Intake Free Review
               </button>
             </div>
 
             {/* Regional covering selector */}
-            <div className="bg-[#141414]/60 border border-white/[0.03] p-6 rounded-sm space-y-4">
-              <h3 className="font-serif text-[#E8D08A] text-lg font-semibold border-b border-white/[0.04] pb-2">
+            <div className="bg-[#FFFFFF]/60 border border-black/[0.07] p-6 rounded-sm space-y-4">
+              <h3 className="font-serif text-[#9A7A28] text-lg font-semibold border-b border-black/[0.08] pb-2">
                 Regional Directories
               </h3>
-              <p className="font-sans text-[11px] text-[#888880] leading-relaxed">
+              <p className="font-sans text-[11px] text-[#5F5B53] leading-relaxed">
                 Aggressive counsel served across municipal networks of North Texas:
               </p>
               <div className="space-y-2 font-sans text-xs">
@@ -454,7 +454,7 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
                   <button 
                     key={idx}
                     onClick={() => navigateToRoute(city.route)}
-                    className="w-full text-left py-2 px-3 bg-black/30 hover:bg-[#C9A84C]/10 border border-transparent hover:border-[#C9A84C]/25 text-[#888880] hover:text-[#E8D08A] transition-all flex items-center justify-between"
+                    className="w-full text-left py-2 px-3 bg-black/[0.03] hover:bg-[#C9A84C]/10 border border-transparent hover:border-[#C9A84C]/25 text-[#5F5B53] hover:text-[#9A7A28] transition-all flex items-center justify-between"
                   >
                     <span>{city.name}</span>
                     <ArrowRight className="w-3 h-3 text-[#C9A84C]" />
@@ -466,33 +466,33 @@ export default function CityLocationDetail({ cityId, setRoute }: CityLocationDet
         </div>
 
         {/* 3. Global Full-Width Shimmer Consultation CTA Banner */}
-        <section className="w-full bg-gradient-to-r from-[#141414] via-[#201C14] to-[#141414] border-t border-b border-[#C9A84C]/25 p-8 sm:p-12 text-center rounded-sm relative overflow-hidden shadow-2xl" id="seo-city-bottom-cta">
+        <section className="w-full bg-gradient-to-r from-[#F0E6CC] via-[#FAF3E0] to-[#F0E6CC] border-t border-b border-[#C9A84C]/25 p-8 sm:p-12 text-center rounded-sm relative overflow-hidden shadow-2xl" id="seo-city-bottom-cta">
           <div className="absolute inset-0 pointer-events-none opacity-5 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.3)_0%,transparent_70%)]" />
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <Landmark className="w-10 h-10 text-[#C9A84C] mx-auto block" />
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#E8D08A] font-semibold tracking-wide">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#9A7A28] font-semibold tracking-wide">
               Straightforward and Aggressive Courthouse Advocate
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#888880] max-w-xl mx-auto leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-[#5F5B53] max-w-xl mx-auto leading-relaxed">
               If you live in {content.cityName} and require strong legal protection in family divorce, child rights, negligent injury compensation or breach of contract, contact Benjamin A. Baker immediately.
             </p>
             <div className="h-px bg-[#C9A84C]/15 w-24 mx-auto" />
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a 
                 href="tel:9032717824"
-                className="inline-flex items-center space-x-2 bg-[#C9A84C] hover:bg-[#E8D08A] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 shadow-xl transition-colors cursor-pointer"
+                className="inline-flex items-center space-x-2 bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 shadow-xl transition-colors cursor-pointer"
               >
                 <Landmark className="w-4 h-4" />
                 <span>Call (903) 271-7824</span>
               </a>
               <button 
                 onClick={() => navigateToRoute('contact')}
-                className="border border-[#C9A84C]/50 hover:border-[#C9A84C] hover:bg-white/[0.02] text-[#C9A84C] hover:text-[#E8D08A] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 transition-colors cursor-pointer"
+                className="border border-[#C9A84C]/50 hover:border-[#C9A84C] hover:bg-black/[0.04] text-[#C9A84C] hover:text-[#9A7A28] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 transition-colors cursor-pointer"
               >
                 Inquire Online Now
               </button>
             </div>
-            <p className="font-sans text-[10px] text-[#888880] pt-2 flex items-center justify-center gap-1.5 uppercase">
+            <p className="font-sans text-[10px] text-[#5F5B53] pt-2 flex items-center justify-center gap-1.5 uppercase">
               <ShieldCheck className="w-3.5 h-3.5 text-green-500" />
               <span>Texas Attorney-Client Privilege Enforced</span>
             </p>

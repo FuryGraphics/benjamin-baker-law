@@ -53,7 +53,7 @@ export default function TrustBar() {
   return (
     <div 
       ref={ref}
-      className="bg-[#141414] py-8 md:py-6 px-12 border-t border-b border-[#C9A84C]/20 relative z-10"
+      className="bg-[#FFFFFF] py-8 md:py-6 px-12 border-t border-b border-[#C9A84C]/20 relative z-10"
       aria-label="Firm Credentials and Trust Statistics"
       id="trust-bar-section"
     >
@@ -72,7 +72,7 @@ export default function TrustBar() {
                 <span className="block font-serif text-[26px] md:text-[24px] text-[#C9A84C] leading-none font-medium">
                   {stat.value}
                 </span>
-                <span className="text-[10px] uppercase tracking-widest text-[#888880] mt-1.5 block">
+                <span className="text-[10px] uppercase tracking-widest text-[#5F5B53] mt-1.5 block">
                   {stat.desc}
                 </span>
               </motion.div>

@@ -29,7 +29,7 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
   };
 
   return (
-    <main className="bg-[#0C0C0C] min-h-screen pt-32 pb-24 px-5 sm:px-6 lg:px-8 relative" id="blog-subpage">
+    <main className="bg-[#FAF8F3] min-h-screen pt-32 pb-24 px-5 sm:px-6 lg:px-8 relative" id="blog-subpage">
       {/* Subtle decorative lights */}
       <div className="absolute top-[15%] left-[10%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.03)_0%,rgba(0,0,0,0)_70%)] pointer-events-none filter blur-2xl" />
       <div className="absolute inset-0 grain-overlay pointer-events-none" />
@@ -50,7 +50,7 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
               {/* Back CTA Button */}
               <button
                 onClick={handleBackToList}
-                className="inline-flex items-center space-x-2 text-[#C9A84C] hover:text-[#E8D08A] font-sans text-xs font-semibold tracking-widest uppercase py-2 cursor-pointer focus:outline-none"
+                className="inline-flex items-center space-x-2 text-[#C9A84C] hover:text-[#9A7A28] font-sans text-xs font-semibold tracking-widest uppercase py-2 cursor-pointer focus:outline-none"
                 id="blog-reader-back-btn"
               >
                 <ArrowLeft className="w-4 h-4" />
@@ -58,49 +58,49 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
               </button>
 
               {/* Header meta */}
-              <div className="space-y-4 pt-4 border-b border-white/[0.04] pb-6">
-                <div className="flex flex-wrap gap-4 text-xs font-sans text-[#888880]">
+              <div className="space-y-4 pt-4 border-b border-black/[0.08] pb-6">
+                <div className="flex flex-wrap gap-4 text-xs font-sans text-[#5F5B53]">
                   <span className="flex items-center gap-1.5 font-medium uppercase text-[#C9A84C] tracking-wide">
                     {selectedPost.category}
                   </span>
-                  <span className="text-white/10">•</span>
+                  <span className="text-black/10">•</span>
                   <span className="flex items-center gap-1.5">
                     <Calendar className="w-3.5 h-3.5 text-[#C9A84C]/60" />
                     <span>{selectedPost.date}</span>
                   </span>
-                  <span className="text-white/10">•</span>
+                  <span className="text-black/10">•</span>
                   <span className="flex items-center gap-1.5">
                     <Clock className="w-3.5 h-3.5 text-[#C9A84C]/60" />
                     <span>{selectedPost.readTime}</span>
                   </span>
                 </div>
 
-                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#F2EDE4] font-medium leading-tight">
+                <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-[#1F1D1A] font-medium leading-tight">
                   {selectedPost.title}
                 </h1>
 
                 <div className="flex items-center space-x-2.5 pt-2">
-                  <div className="w-6 h-6 rounded-full bg-[#C9A84C]/25 text-[#E8D08A] border border-[#C9A84C]/30 flex items-center justify-center text-[10px] font-sans font-bold">
+                  <div className="w-6 h-6 rounded-full bg-[#C9A84C]/25 text-[#9A7A28] border border-[#C9A84C]/30 flex items-center justify-center text-[10px] font-sans font-bold">
                     BAB
                   </div>
-                  <span className="font-sans text-xs text-[#E8D08A] font-medium">
+                  <span className="font-sans text-xs text-[#9A7A28] font-medium">
                     By {selectedPost.author} • Practice Principal
                   </span>
                 </div>
               </div>
 
               {/* Main article text body */}
-              <div className="font-sans text-xs sm:text-sm md:text-base text-[#888880] leading-relaxed space-y-6" id="blog-body-paragraphs">
+              <div className="font-sans text-xs sm:text-sm md:text-base text-[#5F5B53] leading-relaxed space-y-6" id="blog-body-paragraphs">
                 {selectedPost.content.map((para, count) => (
-                  <p key={count} className="text-[#F2EDE4]/80">
+                  <p key={count} className="text-[#1F1D1A]/80">
                     {para}
                   </p>
                 ))}
               </div>
 
               {/* Safe legal alert block */}
-              <div className="bg-[#141414] border-l-2 border-[#C9A84C] p-6 text-xs text-[#888880] leading-relaxed font-sans shadow-md space-y-2 mt-12">
-                <div className="flex items-center space-x-2 text-[#E8D08A] font-serif text-sm font-semibold tracking-wide">
+              <div className="bg-[#FFFFFF] border-l-2 border-[#C9A84C] p-6 text-xs text-[#5F5B53] leading-relaxed font-sans shadow-md space-y-2 mt-12">
+                <div className="flex items-center space-x-2 text-[#9A7A28] font-serif text-sm font-semibold tracking-wide">
                   <AlertTriangle className="w-4 h-4 text-[#C9A84C]" />
                   <span>Mandatory Texas Ad Board Notice:</span>
                 </div>
@@ -110,16 +110,16 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
               </div>
 
               {/* Consultation trigger box */}
-              <div className="bg-[#141414] border border-[rgba(201,168,76,0.18)] p-8 text-center rounded-sm space-y-4">
-                <span className="font-sans text-[11px] tracking-[4px] text-[#A8A8A0] uppercase block">
+              <div className="bg-[#FFFFFF] border border-[rgba(201,168,76,0.18)] p-8 text-center rounded-sm space-y-4">
+                <span className="font-sans text-[11px] tracking-[4px] text-[#5F5B53] uppercase block">
                   HAVE A RELATED LEGAL QUESTION?
                 </span>
-                <h3 className="font-serif text-xl sm:text-2xl text-[#E8D08A] font-medium max-w-md mx-auto">
+                <h3 className="font-serif text-xl sm:text-2xl text-[#9A7A28] font-medium max-w-md mx-auto">
                   Get straightforward answers directly from Benjamin A. Baker
                 </h3>
                 <button
                   onClick={() => setRoute('contact')}
-                  className="bg-[#C9A84C] hover:bg-[#E8D08A] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3.5 px-8 transition-colors cursor-pointer"
+                  className="bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3.5 px-8 transition-colors cursor-pointer"
                   id="blog-reader-cta-btn"
                 >
                   Schedule A Free Consultation
@@ -138,10 +138,10 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
             >
               {/* Journal Title header */}
               <div className="text-center mb-16">
-                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#F2EDE4] font-medium tracking-tight">
+                <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl text-[#1F1D1A] font-medium tracking-tight">
                   The Grayson County Legal Journal
                 </h1>
-                <p className="font-sans text-xs sm:text-sm text-[#888880] tracking-widest uppercase mt-4">
+                <p className="font-sans text-xs sm:text-sm text-[#5F5B53] tracking-widest uppercase mt-4">
                   Straightforward Legal Insights & Sherman Court Updates
                 </p>
                 <div className="w-16 h-[2.5px] bg-[#C9A84C] mx-auto mt-6" />
@@ -152,7 +152,7 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
                 {BLOG_POSTS.map((post) => (
                   <article
                     key={post.id}
-                    className="bg-[#141414] border border-[rgba(201,168,76,0.15)] rounded-sm p-6 flex flex-col justify-between hover:border-[#C9A84C]/40 transition-colors shadow-lg group relative"
+                    className="bg-[#FFFFFF] border border-[rgba(201,168,76,0.15)] rounded-sm p-6 flex flex-col justify-between hover:border-[#C9A84C]/40 transition-colors shadow-lg group relative"
                     id={`blog-card-${post.id}`}
                   >
                     <div>
@@ -162,12 +162,12 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
                       </span>
 
                       {/* Title */}
-                      <h2 className="font-serif text-[#F2EDE4]/95 text-xl font-bold leading-normal mb-3 group-hover:text-[#E8D08A] transition-colors line-clamp-2">
+                      <h2 className="font-serif text-[#1F1D1A]/95 text-xl font-bold leading-normal mb-3 group-hover:text-[#9A7A28] transition-colors line-clamp-2">
                         {post.title}
                       </h2>
 
                       {/* Meta information row */}
-                      <div className="flex space-x-3 text-[10px] text-[#888880] font-sans mb-4">
+                      <div className="flex space-x-3 text-[10px] text-[#5F5B53] font-sans mb-4">
                         <span className="flex items-center gap-1">
                           <Clock className="w-3 h-3 text-[#C9A84C]/40" />
                           <span>{post.readTime}</span>
@@ -177,7 +177,7 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
                       </div>
 
                       {/* Excerpt Summary */}
-                      <p className="font-sans text-xs text-[#888880] leading-relaxed mb-6 block lg:line-clamp-3">
+                      <p className="font-sans text-xs text-[#5F5B53] leading-relaxed mb-6 block lg:line-clamp-3">
                         {post.excerpt}
                       </p>
                     </div>
@@ -185,7 +185,7 @@ export default function BlogPage({ setRoute }: BlogPageProps) {
                     {/* Action button */}
                     <button
                       onClick={() => handleReadPost(post.id)}
-                      className="inline-flex items-center space-x-1.5 text-xs font-semibold font-sans text-[#C9A84C] hover:text-[#E8D08A] uppercase tracking-widest pt-2 cursor-pointer focus:outline-none"
+                      className="inline-flex items-center space-x-1.5 text-xs font-semibold font-sans text-[#C9A84C] hover:text-[#9A7A28] uppercase tracking-widest pt-2 cursor-pointer focus:outline-none"
                       id={`blog-card-btn-${post.id}`}
                     >
                       <span>Read Publication</span>

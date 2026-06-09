@@ -444,7 +444,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
   ];
 
   return (
-    <main className="bg-[#0C0C0C] min-h-screen text-[#F2EDE4] relative pt-32 pb-24 px-5 sm:px-6 lg:px-8 overflow-x-hidden" id="practice-details-wrapper">
+    <main className="bg-[#FAF8F3] min-h-screen text-[#1F1D1A] relative pt-32 pb-24 px-5 sm:px-6 lg:px-8 overflow-x-hidden" id="practice-details-wrapper">
       <div className="absolute inset-0 grain-overlay pointer-events-none opacity-[0.03]" />
       <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] rounded-full bg-[radial-gradient(circle,rgba(201,168,76,0.03)_0%,rgba(0,0,0,0)_75%)] pointer-events-none filter blur-2xl" />
 
@@ -452,7 +452,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
       <div className="max-w-7xl mx-auto space-y-16 relative z-10">
         
         {/* Dynamic Breadcrumb bar */}
-        <nav className="flex items-center space-x-2 text-xs text-[#888880] tracking-widest uppercase font-mono py-2.5 border-b border-white/[0.04]">
+        <nav className="flex items-center space-x-2 text-xs text-[#5F5B53] tracking-widest uppercase font-mono py-2.5 border-b border-black/[0.08]">
           <button onClick={() => navigateToRoute('home')} className="hover:text-[#C9A84C] flex items-center gap-1">
             <Home className="w-3.5 h-3.5" />
             <span>HOME</span>
@@ -460,19 +460,19 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
           <span>/</span>
           <button onClick={() => navigateToRoute('practice-areas')} className="hover:text-[#C9A84C]">PRACTICE AREAS</button>
           <span>/</span>
-          <span className="text-[#E8D08A]">{content.title.toUpperCase()}</span>
+          <span className="text-[#9A7A28]">{content.title.toUpperCase()}</span>
         </nav>
 
         {/* 1. Full-Width Hero layout banner */}
         <div className="space-y-6 max-w-4xl" id="seo-details-hero">
-          <div className="inline-flex items-center space-x-2 border border-[#C9A84C]/25 bg-black/40 py-1.5 px-4 rounded-full text-[10px] font-sans tracking-[4px] uppercase text-[#E8D08A]">
+          <div className="inline-flex items-center space-x-2 border border-[#C9A84C]/25 bg-black/[0.03] py-1.5 px-4 rounded-full text-[10px] font-sans tracking-[4px] uppercase text-[#9A7A28]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#C9A84C] animate-pulse" />
             <span>EXPERT TEXAS LEGAL ADVOCACY</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#E8D08A] font-medium leading-[1.1] tracking-tight">
+          <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#9A7A28] font-medium leading-[1.1] tracking-tight">
             {content.h1}
           </h1>
-          <p className="font-sans text-xs sm:text-sm text-[#888880] tracking-widest uppercase border-l-2 border-[#C9A84C] pl-4">
+          <p className="font-sans text-xs sm:text-sm text-[#5F5B53] tracking-widest uppercase border-l-2 border-[#C9A84C] pl-4">
             Managing Counselor Benjamin A. Baker · Grayson County, Texas Legal Representation
           </p>
         </div>
@@ -484,56 +484,56 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
           <div className="lg:col-span-8 space-y-12">
             
             {/* Intro paragraph (200+ words) */}
-            <section className="space-y-6 border-b border-white/[0.04] pb-10">
-              <h2 className="font-serif text-2xl sm:text-3xl text-[#F2EDE4] font-semibold tracking-wide flex items-center gap-3">
+            <section className="space-y-6 border-b border-black/[0.08] pb-10">
+              <h2 className="font-serif text-2xl sm:text-3xl text-[#1F1D1A] font-semibold tracking-wide flex items-center gap-3">
                 {content.icon}
                 <span>Straightforward Counsel & Aggressive Protection</span>
               </h2>
-              <p className="font-sans text-xs sm:text-sm md:text-base text-[#888880]/90 leading-relaxed font-normal whitespace-pre-line">
+              <p className="font-sans text-xs sm:text-sm md:text-base text-[#5F5B53]/90 leading-relaxed font-normal whitespace-pre-line">
                 {content.intro}
               </p>
             </section>
 
             {/* What We Handle checklist block */}
             <section className="space-y-6" id="what-we-handle-bullets">
-              <h2 className="font-serif text-2xl text-[#E8D08A] font-semibold tracking-wide">
+              <h2 className="font-serif text-2xl text-[#9A7A28] font-semibold tracking-wide">
                 Specific Case Types We Handle
               </h2>
-              <p className="font-sans text-xs text-[#888880] mt-1 leading-relaxed">
+              <p className="font-sans text-xs text-[#5F5B53] mt-1 leading-relaxed">
                 Texas civil and family codes are highly technical. Our firm represents clients in resolving high-risk complexities across multiple core specialties:
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                 {content.handles.map((item, idx) => (
-                  <div key={idx} className="flex items-start space-x-3 bg-[#141414]/80 p-4 border border-white/[0.03] rounded-sm hover:border-[#C9A84C]/20 transition-all">
+                  <div key={idx} className="flex items-start space-x-3 bg-[#FFFFFF]/80 p-4 border border-black/[0.07] rounded-sm hover:border-[#C9A84C]/20 transition-all">
                     <CheckCircle2 className="w-4.5 h-4.5 text-[#C9A84C] shrink-0 mt-0.5" />
-                    <span className="font-sans text-xs text-[#F2EDE4]/80 leading-normal font-medium">{item}</span>
+                    <span className="font-sans text-xs text-[#1F1D1A]/80 leading-normal font-medium">{item}</span>
                   </div>
                 ))}
               </div>
             </section>
 
             {/* 3-Step Process Timeline block */}
-            <section className="space-y-8 pt-6 border-t border-white/[0.04]" id="strategy-process-timeline">
+            <section className="space-y-8 pt-6 border-t border-black/[0.08]" id="strategy-process-timeline">
               <div>
-                <h2 className="font-serif text-2xl text-[#E8D08A] font-semibold tracking-wide">
+                <h2 className="font-serif text-2xl text-[#9A7A28] font-semibold tracking-wide">
                   Strategic Case Workflow Pathway
                 </h2>
-                <p className="font-sans text-xs text-[#888880] mt-1">
+                <p className="font-sans text-xs text-[#5F5B53] mt-1">
                   How Benjamin A. Baker P.C. prepares and defends your legal options:
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
                 {content.timeline.map((step, idx) => (
-                  <div key={idx} className="bg-[#141414] border border-[rgba(201,168,76,0.15)] p-6 rounded-sm relative shadow-xl flex flex-col justify-between group">
+                  <div key={idx} className="bg-[#FFFFFF] border border-[rgba(201,168,76,0.15)] p-6 rounded-sm relative shadow-xl flex flex-col justify-between group">
                     <div>
                       <span className="font-serif text-[#C9A84C] text-5xl font-extralight block mb-4 border-b border-[#C9A84C]/10 pb-2">
                         {step.step}
                       </span>
-                      <h3 className="font-serif text-[#F2EDE4] text-base font-semibold tracking-wide mb-2">
+                      <h3 className="font-serif text-[#1F1D1A] text-base font-semibold tracking-wide mb-2">
                         {step.title}
                       </h3>
-                      <p className="font-sans text-xs text-[#888880] leading-relaxed">
+                      <p className="font-sans text-xs text-[#5F5B53] leading-relaxed">
                         {step.desc}
                       </p>
                     </div>
@@ -543,13 +543,13 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
             </section>
 
             {/* FAQ Accordion Section (6 Questions) */}
-            <section className="space-y-6 pt-6 border-t border-white/[0.04]" id="faq-accordions-container">
+            <section className="space-y-6 pt-6 border-t border-black/[0.08]" id="faq-accordions-container">
               <div>
-                <h2 className="font-serif text-2xl text-[#E8D08A] font-semibold tracking-wide flex items-center gap-2">
+                <h2 className="font-serif text-2xl text-[#9A7A28] font-semibold tracking-wide flex items-center gap-2">
                   <Landmark className="w-6 h-6 text-[#C9A84C]" />
                   <span>Frequently Asked Questions & Advisory Details</span>
                 </h2>
-                <p className="font-sans text-xs text-[#888880] mt-1 leading-relaxed">
+                <p className="font-sans text-xs text-[#5F5B53] mt-1 leading-relaxed">
                   Important legal aspects concerning your legal protections inside Sherman and Grayson County courts:
                 </p>
               </div>
@@ -560,11 +560,11 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
                   return (
                     <div 
                       key={idx}
-                      className="border border-white/[0.04] bg-[#141414]/40 hover:bg-[#141414]/90 rounded-sm overflow-hidden transition-all duration-300"
+                      className="border border-black/[0.08] bg-[#FFFFFF]/40 hover:bg-[#FFFFFF]/90 rounded-sm overflow-hidden transition-all duration-300"
                     >
                       <button 
                         onClick={() => toggleFaq(idx)}
-                        className="w-full text-left p-5 flex justify-between items-center text-xs sm:text-sm font-serif font-semibold text-[#F2EDE4] hover:text-[#E8D08A] focus:outline-none transition-colors"
+                        className="w-full text-left p-5 flex justify-between items-center text-xs sm:text-sm font-serif font-semibold text-[#1F1D1A] hover:text-[#9A7A28] focus:outline-none transition-colors"
                       >
                         <span className="pr-4">{faq.q}</span>
                         {isOpen ? <ChevronUp className="w-4 h-4 text-[#C9A84C] shrink-0" /> : <ChevronDown className="w-4 h-4 text-[#C9A84C] shrink-0" />}
@@ -577,7 +577,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3 }}
                           >
-                            <div className="px-5 pb-5 pt-1 border-t border-white/[0.03] text-xs text-[#888880] leading-relaxed whitespace-pre-line font-sans">
+                            <div className="px-5 pb-5 pt-1 border-t border-black/[0.07] text-xs text-[#5F5B53] leading-relaxed whitespace-pre-line font-sans">
                               {faq.a}
                             </div>
                           </motion.div>
@@ -594,28 +594,28 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
           <div className="lg:col-span-4 space-y-8" id="seo-deep-sidebar">
             
             {/* Immediate Intake prompt card */}
-            <div className="border border-[#C9A84C]/20 bg-[#141414] p-6 text-center space-y-4 shadow-xl">
-              <span className="font-serif text-lg text-[#E8D08A] font-semibold block tracking-wide">
+            <div className="border border-[#C9A84C]/20 bg-[#FFFFFF] p-6 text-center space-y-4 shadow-xl">
+              <span className="font-serif text-lg text-[#9A7A28] font-semibold block tracking-wide">
                 Urgent Case Evaluation
               </span>
-              <p className="font-sans text-xs text-[#888880] leading-relaxed">
+              <p className="font-sans text-xs text-[#5F5B53] leading-relaxed">
                 Need immediate representation at the Grayson County Justice Center? Call our office today. Any data shared is held under strict Texas Attorney-Client Privilege.
               </p>
               <div className="w-10 h-0.5 bg-[#C9A84C] mx-auto" />
-              <div className="text-xl font-serif text-[#F2EDE4] font-bold font-mono">
+              <div className="text-xl font-serif text-[#1F1D1A] font-bold font-mono">
                 (903) 271-7824
               </div>
               <button 
                 onClick={() => navigateToRoute('contact')}
-                className="w-full bg-[#C9A84C] hover:bg-[#E8D08A] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3 transition-colors cursor-pointer"
+                className="w-full bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-3 transition-colors cursor-pointer"
               >
                 Intake Free Claim Review
               </button>
             </div>
 
             {/* Related Practice Specialties */}
-            <div className="bg-[#141414]/60 border border-white/[0.03] p-6 rounded-sm space-y-4">
-              <h3 className="font-serif text-[#E8D08A] text-lg font-semibold border-b border-white/[0.04] pb-2">
+            <div className="bg-[#FFFFFF]/60 border border-black/[0.07] p-6 rounded-sm space-y-4">
+              <h3 className="font-serif text-[#9A7A28] text-lg font-semibold border-b border-black/[0.08] pb-2">
                 Related Practice Areas
               </h3>
               <div className="space-y-2 font-sans text-xs">
@@ -623,7 +623,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
                   <button 
                     key={idx}
                     onClick={() => navigateToRoute(area.route)}
-                    className="w-full text-left py-2 px-3 bg-black/30 hover:bg-[#C9A84C]/10 border border-transparent hover:border-[#C9A84C]/20 text-[#888880] hover:text-[#E8D08A] transition-all flex items-center justify-between group"
+                    className="w-full text-left py-2 px-3 bg-black/[0.03] hover:bg-[#C9A84C]/10 border border-transparent hover:border-[#C9A84C]/20 text-[#5F5B53] hover:text-[#9A7A28] transition-all flex items-center justify-between group"
                   >
                     <span>{area.title}</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#C9A84C] opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -631,7 +631,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
                 ))}
                 <button 
                   onClick={() => navigateToRoute('practice-areas')}
-                  className="w-full text-center hover:text-[#C9A84C] transition-colors font-semibold text-[11px] uppercase tracking-wider block pt-3 border-t border-white/[0.03]"
+                  className="w-full text-center hover:text-[#C9A84C] transition-colors font-semibold text-[11px] uppercase tracking-wider block pt-3 border-t border-black/[0.07]"
                 >
                   View All Specialties
                 </button>
@@ -639,11 +639,11 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
             </div>
 
             {/* Service Cities SEO Directory */}
-            <div className="bg-[#141414]/60 border border-white/[0.03] p-6 rounded-sm space-y-4">
-              <h3 className="font-serif text-[#E8D08A] text-lg font-semibold border-b border-white/[0.04] pb-2">
+            <div className="bg-[#FFFFFF]/60 border border-black/[0.07] p-6 rounded-sm space-y-4">
+              <h3 className="font-serif text-[#9A7A28] text-lg font-semibold border-b border-black/[0.08] pb-2">
                 Regional Service Covered
               </h3>
-              <p className="font-sans text-[11px] text-[#888880] leading-relaxed">
+              <p className="font-sans text-[11px] text-[#5F5B53] leading-relaxed">
                 Benjamin A. Baker provides courtroom advocates and counsel across Grayson County, TX municipal networks:
               </p>
               <div className="grid grid-cols-2 gap-2 font-sans text-[11px]">
@@ -651,7 +651,7 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
                   <button 
                     key={idx}
                     onClick={() => navigateToRoute(city.route)}
-                    className="text-left py-2 px-2.5 bg-black/20 text-[#888880] hover:text-[#C9A84C] border border-white/[0.02] hover:border-[#C9A84C]/20 transition-all text-xs"
+                    className="text-left py-2 px-2.5 bg-black/[0.02] text-[#5F5B53] hover:text-[#C9A84C] border border-black/[0.06] hover:border-[#C9A84C]/20 transition-all text-xs"
                   >
                     • {city.name.replace(', TX', '')}
                   </button>
@@ -662,33 +662,33 @@ export default function PracticeAreaDetail({ areaId, setRoute }: PracticeAreaDet
         </div>
 
         {/* 3. Global Full-Width Shimmer Consultation CTA Banner */}
-        <section className="w-full bg-gradient-to-r from-[#141414] via-[#201C14] to-[#141414] border-t border-b border-[#C9A84C]/25 p-8 sm:p-12 text-center rounded-sm relative overflow-hidden shadow-2xl" id="seo-bottom-cta">
+        <section className="w-full bg-gradient-to-r from-[#F0E6CC] via-[#FAF3E0] to-[#F0E6CC] border-t border-b border-[#C9A84C]/25 p-8 sm:p-12 text-center rounded-sm relative overflow-hidden shadow-2xl" id="seo-bottom-cta">
           <div className="absolute inset-0 pointer-events-none opacity-5 bg-[radial-gradient(circle_at_center,rgba(201,168,76,0.3)_0%,transparent_70%)]" />
           <div className="relative z-10 max-w-3xl mx-auto space-y-6">
             <Landmark className="w-10 h-10 text-[#C9A84C] mx-auto block" />
-            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#E8D08A] font-semibold tracking-wide">
+            <h2 className="font-serif text-2xl sm:text-3xl lg:text-4xl text-[#9A7A28] font-semibold tracking-wide">
               Secure Straightforward Counsel & Aggressive Protection
             </h2>
-            <p className="font-sans text-xs sm:text-sm text-[#888880] max-w-xl mx-auto leading-relaxed">
+            <p className="font-sans text-xs sm:text-sm text-[#5F5B53] max-w-xl mx-auto leading-relaxed">
               If you have an active legal dispute in Family Law, Personal Injury, or Civil contracts, do not wait. Request confidential direct evaluation logs with attorney Benjamin A. Baker immediately.
             </p>
             <div className="h-px bg-[#C9A84C]/15 w-24 mx-auto" />
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
               <a 
                 href="tel:9032717824"
-                className="inline-flex items-center space-x-2 bg-[#C9A84C] hover:bg-[#E8D08A] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 shadow-xl transition-colors cursor-pointer"
+                className="inline-flex items-center space-x-2 bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 shadow-xl transition-colors cursor-pointer"
               >
                 <Landmark className="w-4 h-4" />
                 <span>Call (903) 271-7824</span>
               </a>
               <button 
                 onClick={() => navigateToRoute('contact')}
-                className="border border-[#C9A84C]/50 hover:border-[#C9A84C] hover:bg-white/[0.02] text-[#C9A84C] hover:text-[#E8D08A] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 transition-colors cursor-pointer"
+                className="border border-[#C9A84C]/50 hover:border-[#C9A84C] hover:bg-black/[0.04] text-[#C9A84C] hover:text-[#9A7A28] font-sans text-xs font-bold tracking-widest uppercase py-4 px-8 transition-colors cursor-pointer"
               >
                 Inquire Online Now
               </button>
             </div>
-            <p className="font-sans text-[10px] text-[#888880] pt-2 flex items-center justify-center gap-1.5 uppercase">
+            <p className="font-sans text-[10px] text-[#5F5B53] pt-2 flex items-center justify-center gap-1.5 uppercase">
               <ShieldCheck className="w-3.5 h-3.5 text-green-500" />
               <span>Texas Attorney-Client Privilege Enforced</span>
             </p>

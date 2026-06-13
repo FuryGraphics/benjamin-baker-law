@@ -3,7 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useEffect } from 'react';
 import { Phone, Mail, MapPin, Clock, ShieldCheck, ArrowRight } from 'lucide-react';
+
+const FORM_EMBED_SRC = 'https://link.msgsndr.com/js/form_embed.js';
 
 const CONTACT_EMAIL = 'BenjaminABaker62@gmail.com';
 const MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
@@ -13,6 +16,15 @@ const MAILTO = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
 )}`;
 
 export default function ContactPage() {
+  // Load the LeadConnector form embed script once (it auto-resizes the iframe).
+  useEffect(() => {
+    if (document.querySelector(`script[src="${FORM_EMBED_SRC}"]`)) return;
+    const script = document.createElement('script');
+    script.src = FORM_EMBED_SRC;
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   return (
     <main className="bg-[#FAF8F3] min-h-screen pt-32 pb-24 px-5 sm:px-6 lg:px-8 relative" id="contact-subpage">
       {/* Decorative gradients */}
@@ -49,7 +61,34 @@ export default function ContactPage() {
               </p>
             </div>
 
-            {/* Primary: Email button */}
+            {/* Primary: LeadConnector contact form */}
+            <iframe
+              src="https://api.leadconnectorhq.com/widget/form/DrfaFzQXn9Nw5iuUpUIf"
+              style={{ width: '100%', minHeight: '480px', border: 'none', borderRadius: '10px' }}
+              id="inline-DrfaFzQXn9Nw5iuUpUIf"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Website Form (Benjamin A. Baker P.C.)"
+              data-height="480"
+              data-layout-iframe-id="inline-DrfaFzQXn9Nw5iuUpUIf"
+              data-form-id="DrfaFzQXn9Nw5iuUpUIf"
+              title="Website Form (Benjamin A. Baker P.C.)"
+            />
+
+            <div className="flex items-center gap-3 my-8">
+              <span className="h-px flex-1 bg-black/[0.08]" />
+              <span className="font-sans text-[10px] font-bold tracking-[3px] uppercase text-[#5F5B53]">
+                Or reach us directly
+              </span>
+              <span className="h-px flex-1 bg-black/[0.08]" />
+            </div>
+
+            {/* Secondary: Email button */}
             <a
               href={MAILTO}
               className="group flex items-center justify-between gap-4 bg-[#C9A84C] hover:bg-[#9A7A28] text-[#0C0C0C] hover:text-white transition-colors duration-300 py-5 px-7 rounded-sm shadow-xl shadow-black/[0.08]"

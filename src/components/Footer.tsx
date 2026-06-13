@@ -173,21 +173,6 @@ export default function Footer({ currentRoute, setRoute }: FooterProps) {
           </div>
         </div>
       </div>
-
-      {/* Floating Universal Call Now Button, fixed bottom-right */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <a
-          href="tel:9032717824"
-          className="group flex items-center space-x-2 bg-[#C9A84C] hover:bg-[#E8D08A] active:bg-[#C9A84C] text-[#0C0C0C] font-sans text-xs font-bold tracking-[2px] uppercase py-3.5 px-5 rounded-full shadow-2xl transition-all duration-300"
-          title="Call attorney now"
-          id="floating-call-now-trigger"
-        >
-          <Phone className="w-4 h-4 text-[#0C0C0C] fill-current" />
-          <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-500 ease-out inline-block whitespace-nowrap pl-0 group-hover:pl-1">
-            Call (903) 271-7824
-          </span>
-        </a>
-      </div>
     </footer>
   );
 }

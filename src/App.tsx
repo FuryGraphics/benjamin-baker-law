@@ -73,6 +73,31 @@ export default function App() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  // Load the LeadConnector chat widget once, and hide it on the contact page
+  // (where the inline form already handles inquiries).
+  useEffect(() => {
+    const SRC = 'https://widgets.leadconnectorhq.com/loader.js';
+    if (!document.querySelector(`script[src="${SRC}"]`)) {
+      const script = document.createElement('script');
+      script.src = SRC;
+      script.async = true;
+      script.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+      script.setAttribute('data-widget-id', '6a2d5bf3bd8129997d4b9677');
+      document.body.appendChild(script);
+    }
+    // CSS toggle so the widget hides regardless of when the loader finishes.
+    if (!document.getElementById('chat-widget-hide-style')) {
+      const style = document.createElement('style');
+      style.id = 'chat-widget-hide-style';
+      style.textContent = 'body.hide-chat-widget chat-widget{display:none!important;}';
+      document.head.appendChild(style);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle('hide-chat-widget', route === 'contact');
+  }, [route]);
+
   return (
     <div className="min-h-screen flex flex-col justify-between bg-[#FAF8F3] text-[#1F1D1A] selection:bg-[#C9A84C]/30 selection:text-[#9A7A28] overflow-x-hidden font-sans" id="law-firm-root">
       {/* Premium Header/Navigation Bar */}
